@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agissons pour la Santé - Missions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><em>Accueil</em></a></li>
+            <li><a href="programme.html"><em>Programme</em></a></li>
+            <li><a href="equipe.html"><em>Equipe</em></a></li>
+            <li><a href="mission.html" class="active"><em>Missions</em></a></li>
+            <li><a href="contact.html"><em>Contact</em></a></li>
+        </ul>
+    </nav>
+
+    <main class="animated-content">
+        <h1><em>NOS MISSIONS PRINCIPALES</em></h1>
+        <p><em>Les objectifs et les grandes missions sur lesquels repose le projet "Agissons pour la Santé":</em></p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th><em>Icône / Image</em></th>
+                    <th><em>Mission</em></th>
+                    <th><em>Description</em></th>
+                    <th><em>Impact attendu</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/soins.jpg" alt="Soins" class="table-img"></td>
+                    <td><em>Accès aux Soins primaires</em></td>
+                    <td><em>Apporter des médicaments aux zones enclavées</em></td>
+                    <td><em>Zéro village sans assistance médicale</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/eau.jpg" alt="Eau" class="table-img"></td>
+                    <td><em>Eau Propre et Hygiène</em></td>
+                    <td><em>Installer des puits et des filtres à eau</em></td>
+                    <td><em>Réduction des maladies diarrhéiques</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/maternite.jpg" alt="Maternite" class="table-img"></td>
+                    <td><em>Santé Maternelle</em></td>
+                    <td><em>Suivi gratuit des femmes enceintes</em></td>
+                    <td><em>Diminution de la mortalité infantile</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/urgence.jpg" alt="Urgence" class="table-img"></td>
+                    <td><em>Réponse aux Urgences</em></td>
+                    <td><em>Interventions rapides lors des épidémies</em></td>
+                    <td><em>Prise en charge en moins de 24 heures</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <a href="equipe.html" class="floating-back-btn">Retour</a>
+<script>
+// Mamaky ny baiko avy amin'ny localStorage fotsiny ireto pejy ireto
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+</script>
+</body>
+</html>

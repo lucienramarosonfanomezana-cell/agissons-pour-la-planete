@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agissons pour la Santé - Programme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><em>Accueil</em></a></li>
+            <li><a href="programme.html" class="active"><em>Programme</em></a></li>
+            <li><a href="equipe.html"><em>Equipe</em></a></li>
+            <li><a href="mission.html"><em>Missions</em></a></li>
+            <li><a href="contact.html"><em>Contact</em></a></li>
+        </ul>
+    </nav>
+
+    <main class="animated-content">
+        <h1><em>NOTRE PROGRAMMES D'ACTIVITES</em></h1>
+        <p><em>Voici l'agenda ainsi que les activites que nous realisons de maniere recurrente cette annee.</em></p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th><em>Aperçu</em></th>
+                    <th><em>Date / Période</em></th>
+                    <th><em>Activité principale</em></th>
+                    <th><em>Objectif Target</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/sante.jpg" alt="Santé" class="table-img"></td>
+                    <td><em>Janvier - Mars</em></td>
+                    <td><em>Campagne de Vaccination Mobile</em></td>
+                    <td><em>Protéger 5000 enfants en zone rurale</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/nutrition.jpg" alt="Nutrition" class="table-img"></td>
+                    <td><em>Avril - Juin</em></td>
+                    <td><em>Distribution de Kits Nutritionnels</em></td>
+                    <td><em>Aider les familles nécessiteuses</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/sensibilisation.jpg" alt="Sensibilisation" class="table-img"></td>
+                    <td><em>Juillet</em></td>
+                    <td><em>Ateliers d'Hygiène Scolaire</em></td>
+                    <td><em>Éduquer les élèves sur les gestes barrières</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/depistage.jpg" alt="Depistage" class="table-img"></td>
+                    <td><em>Août - Octobre</em></td>
+                    <td><em>Dépistage Diabète et Tension</em></td>
+                    <td><em>Consultations gratuites pour tous</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/sport.jpg" alt="Sport" class="table-img"></td>
+                    <td><em>Novembre</em></td>
+                    <td><em>Marathon "Courir pour la Santé"</em></td>
+                    <td><em>Mobiliser les jeunes et collecter des fonds</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <a href="index.html" class="floating-back-btn">Retour</a>
+<script>
+// Mamaky ny baiko avy amin'ny localStorage fotsiny ireto pejy ireto
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+</script>
+</body>
+</html>

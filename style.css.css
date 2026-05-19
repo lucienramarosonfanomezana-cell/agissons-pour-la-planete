@@ -1,0 +1,837 @@
+/* --- CONFIGURATION FOTOTRA --- */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+
+
+body {
+
+    background-color: #f9fbf9;
+
+    color: #333;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* --- NAV (LOKO MAINTSO MAIZINA) --- */
+
+nav {
+
+    background-color: #556b2f; /* Dark Olive */
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1rem 5%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+/* --- STYLE TITRE (Inspiré par L'Avenir de la Robotique) --- */
+.hero-content h1 {
+    font-size: 4.5rem;   /* Habe lehibe */
+    font-weight: 800;    /* Matevina be */
+    text-transform: uppercase;
+    color: white;        /* Ny soratra voalohany dia fotsy */
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+/* Ity kosa ny style ho an'ilay teny misy dégradé manga */
+.hero-content h1 .highlight {
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+nav ul { display: flex; list-style: none; }
+
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* --- HERO (SARY ACCUEIL) --- */
+
+.hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0; left: 0; width: 100%; height: 100%;
+
+    /* HAMARINO: Tokony ho fond.jpg no anaran'ilay sary ao amin'ny images */
+
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+
+                url('images/fond.jpg') no-repeat center center/cover;
+
+    z-index: -1;
+
+}
+
+
+
+/* --- BOKOTRA OLIVE --- */
+
+.btn-olive {
+
+    display: inline-block;
+
+    background-color: #6b8e23; /* Olive Green */
+
+    color: white !important;
+
+    padding: 12px 25px;
+
+    margin: 10px;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.btn-olive:hover {
+
+    background-color: #556b2f;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.flex-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* --- CONTAINER SY FOOTER --- */
+
+.container { padding: 60px 5%; text-align: center; }
+
+.section-title { color: #556b2f; margin-bottom: 40px; font-size: 2.5rem; }
+
+
+
+footer {
+
+    background-color: #556b2f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+}
+
+.btn-olive {
+
+    display: inline-block;
+
+    background-color: #6b8e23;
+
+    color: white !important;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+}
+
+/* --- AMERENANA NY ANIMATION --- */
+
+
+
+/* Mibaiko ny sary hihetsika moramora */
+
+@keyframes slowZoom {
+
+    from { transform: scale(1); }
+
+    to { transform: scale(1.1); }
+
+}
+
+
+
+/* Mibaiko ny soratra hiseho moramora avy any ambany */
+
+@keyframes fadeInUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* Ampiharina amin'ny sary fond ny animation */
+
+.hero::before {
+
+    animation: slowZoom 20s infinite alternate;
+
+}
+
+
+
+/* Ampiharina amin'ny votoatin'ny accueil ny animation */
+
+.hero-content {
+
+    animation: fadeInUp 1.5s ease-out;
+
+}
+
+/* --- CONTACT PAGE DESIGN --- */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 40px;
+
+    margin-top: 30px;
+
+    text-align: left;
+
+}
+
+
+
+.contact-info h3 {
+
+    color: #556b2f;
+
+    margin-bottom: 20px;
+
+    font-size: 1.5rem;
+
+}
+
+
+
+.contact-info p {
+
+    margin-bottom: 15px;
+
+    font-size: 1.1rem;
+
+    color: #333;
+
+}
+
+
+
+.contact-info i {
+
+    color: #6b8e23;
+
+    margin-right: 15px;
+
+    width: 20px;
+
+}
+
+
+
+.contact-map {
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* --- BUTTONS --- */
+
+.btn-olive {
+
+    display: inline-block;
+
+    background-color: #6b8e23;
+
+    color: white !important;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+.btn-olive:hover {
+
+    background-color: #556b2f;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+
+.flex-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* --- ANIMATION ACCUEIL (Hamerenana azy) --- */
+
+@keyframes slowZoom {
+
+    from { transform: scale(1); }
+
+    to { transform: scale(1.1); }
+
+}
+
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0; left: 0; width: 100%; height: 100%;
+
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/fond.jpg') no-repeat center center/cover;
+
+    z-index: -1;
+
+    animation: slowZoom 20s infinite alternate;
+
+}
+
+@keyframes slowZoom {
+
+    from { transform: scale(1); }
+
+    to { transform: scale(1.1); }
+
+}
+
+
+
+.hero::before {
+
+    animation: slowZoom 20s infinite alternate;
+
+} /* --- STYLE HO AN'NY SARY AO AMIN'NY EQUIPE --- */
+.equipe-img {
+    width: 150px;       /* Habean'ny sary */
+    height: 150px;      /* Tsy maintsy mitovy amin'ny width mba ho boribory tsara */
+    border-radius: 50%; /* Manao azy ho boribory */
+    object-fit: cover;  /* Tsy mampitofezaka ny sary raha tsy square izy */
+    margin-bottom: 15px;
+    border: 3px solid #6b8e23; /* Sisiny kely miloko maitso olive */
+}
+/* --- STYLE MANOKANA HO AN'NY CONTACT CARDS --- */
+.card i.fa-facebook-f {
+    color: #1877F2; /* Loko ofisialin'ny Facebook */
+}
+
+.card i.fa-envelope-open-text {
+    color: #6b8e23; /* Loko maitso olive ho an'ny mailaka */
+}
+
+/* Fanitsiana ny bokotra ao anatin'ny card mba ho kanto */
+.card .btn-olive {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* Effet hover rehefa mikasika ny card ny voalavo (souris) */
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 1px solid #6b8e23;
+}
+/* --- STYLE BOKOTRA DECOUVRIR (MANGA) --- */
+.btn-decouvrir {
+    display: inline-block;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5); /* Loko manga dégradé */
+    color: white !important; /* Soratra fotsy */
+    padding: 12px 30px;
+    text-decoration: none;   /* Nesorina ilay tsipika ambany */
+    border-radius: 50px;     /* Endrika boribory kanto */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3); /* Ombra manga kely */
+    border: none;
+    cursor: pointer;
+}
+
+/* Rehefa manakaiky ny souris (Hover) */
+.btn-decouvrir:hover {
+    transform: translateY(-3px); /* Miakatra kely */
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+    background: linear-gradient(to right, #3a7bd5, #00d2ff); /* Miova kely ny dégradé */
+}
+/* --- STYLE TABILAO (PLAN D'ACTION) --- */
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto; /* Mba hahafahany mitsindrona amin'ny finday */
+}
+
+.action-table {
+    width: 100%;
+    border-collapse: collapse; /* Manaisotra ny elanelana amin'ny case */
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.action-table thead {
+    background-color: #556b2f; /* Loko maitso olive */
+    color: white;
+}
+
+.action-table th, .action-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* Loko rehefa mandalo ny souris */
+.action-table tbody tr:hover {
+    background-color: #f1f5eb;
+}
+
+.phase-col {
+    font-weight: bold;
+    color: #556b2f;
+    width: 150px;
+}
+
+.phase-col i {
+    margin-right: 10px;
+    color: #6b8e23;
+}
+
+.obj-col {
+    font-weight: 600;
+    color: #333;
+}
+/* Loko rehefa Mode Nuit */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Azonao ampiana ny card na tabilao koa */
+body.dark-mode .card, body.dark-mode table {
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+/* --- LOKO REHEFA MODE NUIT (Apetraho ao anaty style.css) --- */
+body.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #f4f4f4 !important;
+}
+
+body.dark-mode nav {
+    background-color: #000000 !important;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d !important;
+    color: white !important;
+}
+
+body.dark-mode .section-title {
+    color: #a2c162 !important;
+}
+/* Apetraho any anaty style.css ity fa aza atao any amin'ny faran'ny HTML */
+body.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #f4f4f4 !important;
+}
+body.dark-mode nav {
+    background-color: #000000 !important;
+}
+body.dark-mode .card {
+    background-color: #2d2d2d !important;
+    color: white !important;
+}
+#dark-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0; /* Loko fotsy kely */
+    color: #333;
+    border-radius: 4px; /* Boriborina kely ny sisiny */
+    text-decoration: none; /* Esarina ilay tsipika ambany */
+    display: inline-block;
+}
+
+/* Rehefa anaty Mode Nuit */
+body.dark-mode #dark-btn {
+    background-color: #333;
+    color: #fff;
+}
+/* 1. Mamorona ny Animation (Avy amin'ny mangina mankany amin'ny mipoitra sy miakatra kely) */
+@keyframes mipoitraTsikelikely {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Miakatra kely avy any ambany */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Ampiharina amin'ireo soratra lehibe sy lahatsoratra ao amin'ny pejy */
+h1, h2, h3, p, .card {
+    animation: mipoitraTsikelikely 1s ease-out forwards;
+}
+
+/* 3. Trikà (Delay) mba tsy hiara-mipoitra tampoka daholo fa hifandimby tsikelikely */
+h1 {
+    animation-delay: 0.2s;
+}
+
+p {
+    animation-delay: 0.5s;
+}
+
+.card, table {
+    animation-delay: 0.8s;
+}
+
+.back-btn:hover {
+    transform: scale(1.2); /* Mihalehibe kely rehefa ampanatodihina "souris" */
+}
+/* --- BOX REHEFA AMPIDIRINA EO AMIN'NY SARY --- */
+.hero-welcome-box {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Aloka matromatroka mba hazava tsara ny soratra eo ambonin'ny sary */
+    backdrop-filter: blur(3px); /* Manalokaloka kely ny sary ao aoriana */
+}
+
+/* --- 1. TONGA SOA (Mijanona eo ampovoany fa miova loko) --- */
+.welcome-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: lokoMaro 8s linear infinite;
+}
+
+/* --- 2. AGISSONS POUR LA PLANÈTE (Lamasinina hita manontolo) --- */
+.planet-train-container {
+    width: 100%;
+    overflow: hidden; /* Tsy avela hivoaka ny ecran */
+    display: flex;
+    justify-content: center;
+}
+
+.planet-train-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
+    /* Animation roa: Lamasinina Ping-Pong (fihetsehana) + Loko */
+    animation: lamasininaKely 6s ease-in-out infinite alternate, 
+               lokoPlaneteVaovao 5s linear infinite;
+}
+
+/* --- NY ANIMATIONS (KEYFRAMES) --- */
+
+/* Fiovan'ny lokon'ny Tonga Soa (Loko maro be) */
+@keyframes lokoMaro {
+    0%   { color: #ff3366; } /* Rôzy */
+    20%  { color: #33ccff; } /* Manga */
+    40%  { color: #33ff77; } /* Maintso */
+    60%  { color: #ffcc00; } /* Mavo */
+    80%  { color: #ff9933; } /* Orange */
+    100% { color: #ff3366; }
+}
+
+/* Fiovan'ny lokon'ny Agissons pour la planète */
+@keyframes JokoPlaneteVaovao {
+    0%   { color: #2e7d32; } /* Maintso */
+    33%  { color: #0288d1; } /* Manga */
+    66%  { color: #8ebd13; } /* Maintso tanora */
+    100% { color: #2e7d32; }
+}
+
+/* Fihetsika Lamasinina Ping-Pong (tsy atao lasa lavitra loatra mba ho hita foana ilay soratra) */
+@keyframes lamasininaKely {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+ } /* Ity `}` ity no manidy izay kaody nania tany ambony tany mba tsy hanakorontana antsika intsony */
+
+/* --- ANIMATION LAMASININA PING-PONG --- */
+@keyframes lamasininaKely {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
+
+/* --- FAMANTARANA NY MENU MISOKATRA --- */
+nav ul li a.active {
+    color: #0288d1 !important; /* Loko manga ny soratra */
+    font-weight: bold;
+    border-bottom: 3px solid #0288d1; /* Tsipika manga eo ambany */
+    padding-bottom: 5px;
+}
+
+/* Rehefa anaty Mode Nuit mba hazava tsara */
+body.dark-mode nav ul li a.active {
+    color: #29b6f6 !important;
+    border-bottom-color: #29b6f6;
+}
+/* --- BOKOTRA RETOUR MANGA HITSINGEVANA --- */
+.floating-back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0288d1; /* Loko manga tsara tarehy */
+    color: white !important;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Rehefa ampanatodihina ny "souris" */
+.floating-back-btn:hover {
+    background-color: #01579b; /* Manga matotra kokoa */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Rehefa Mode Nuit */
+body.dark-mode .floating-back-btn {
+    background-color: #1976d2; /* Manga mazava kely rehefa amin'ny maizina */
+}
+/* --- HAINGO NY TABILAO (TABLE STYLE) --- */
+.data-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-table th {
+    background-color: #0288d1; /* Loko manga mifanaraka amin'ny bokotra */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333333;
+}
+
+/* Haingo ny sary kely ao anaty tabilao */
+.table-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%; /* Boribory tsara */
+    border: 2px solid #ddd;
+}
+
+/* Modely ho an'ny Mode Nuit ny tabilao */
+body.dark-mode .data-table {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+body.dark-mode .data-table td {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+body.dark-mode .data-table th {
+    background-color: #1976d2;
+}
+
+/* --- ANIMATION MIPOITRA TSIKELIKELY (FADE IN EFFECTS) --- */
+@keyframes mipoitraMalefaka {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ampiharina amin'ny votoatiny manontolo */
+.animated-content h1 {
+    animation: mipoitraMalefaka 0.6s ease-out forwards;
+}
+
+.animated-content p {
+    animation: mipoitraMalefaka 0.9s ease-out forwards;
+}
+
+.data-table {
+    animation: mipoitraMalefaka 1.3s ease-out forwards;
+}
+/* --- MANERY NY MENU HO ANKAVIA FOANA ISAKY NY PEJY --- */
+nav ul {
+    display: flex !important;
+    justify-content: flex-start !important; /* Terena miankavia */
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 10px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+nav ul li {
+    margin-right: 20px !important; /* Elanelana miankavanana */
+    display: inline-block !important;
+}
+/* --- FITANTANANA NY MODE NUIT AMIN'NY SARY --- */
+
+/* Rehefa mavitrika ny dark-mode, dia temporary maizina ny sary ao aoriana */
+body.dark-mode .hero {
+    filter: brightness(0.7) contrast(1.1); /* Lasa maizina 30% ilay sary lehibe */
+    transition: filter 0.5s ease; /* Miova moramora fa tsy tampoka */
+}
+
+/* Manalokaloka kely ilay boaty misy soratra eo ambonin'ny sary rehefa maizina */
+body.dark-mode .hero-welcome-box {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}

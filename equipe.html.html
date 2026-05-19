@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agissons pour la Santé - Équipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><em>Accueil</em></a></li>
+            <li><a href="programme.html"><em>Programme</em></a></li>
+            <li><a href="equipe.html" class="active"><em>Equipe</em></a></li>
+            <li><a href="mission.html"><em>Missions</em></a></li>
+            <li><a href="contact.html"><em>Contact</em></a></li>
+        </ul>
+    </nav>
+
+    <main class="animated-content">
+        <h1><em>MEMBRES DE NOTRE EQUIPE</em></h1>
+        <p><em>Les dirigeants et les employes actifs qui realisent le projet.</em></p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th><em>Photo</em></th>
+                    <th><em>Nom et Prénom</em></th>
+                    <th><em>Rôle / Poste</em></th>
+                    <th><em>Spécialité</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/directeur.jpg" alt="Directeur" class="table-img"></td>
+                    <td><em>Dr Lucien Ramaroson</em></td>
+                    <td><em>Directeur Général</em></td>
+                    <td><em>Santé plante</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/coordinatrice.jpg" alt="Coordinatrice" class="table-img"></td>
+                    <td><em>Mme Marie</em></td>
+                    <td><em>Coordinatrice des Projets</em></td>
+                    <td><em>Logistique Humanitaire</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/medecin.jpg" alt="Medecin" class="table-img"></td>
+                    <td><em>Dr.Jean luc</em></td>
+                    <td><em>Médecin Chef Mobile</em></td>
+                    <td><em>Pédiatrie</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/nutritionniste.jpg" alt="Nutritionniste" class="table-img"></td>
+                    <td><em>Mme claire</em></td>
+                    <td><em>Responsable Nutrition</em></td>
+                    <td><em>Diététique</em></td>
+                </tr>
+                <tr>
+                    <td><img src="images/communication.jpg" alt="Communication" class="table-img"></td>
+                    <td><em>Mr Pierre</em></td>
+                    <td><em>Chargé de Communication</em></td>
+                    <td><em>Relations Publiques</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <a href="programme.html" class="floating-back-btn">Retour</a>
+
+<script>
+// Mamaky ny baiko avy amin'ny localStorage fotsiny ireto pejy ireto
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+</script>
+</body>
+</html>

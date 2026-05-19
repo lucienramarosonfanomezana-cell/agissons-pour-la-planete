@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agissons pour la Santé - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active"><em>Accueil</em></a></li>
+            <li><a href="programme.html"><em>Programme</em></a></li>
+            <li><a href="equipe.html"><em>Equipe</em></a></li>
+            <li><a href="mission.html"><em>Missions</em></a></li>
+            <li><a href="contact.html"><em>Contact</em></a></li>
+            <li>
+                <a href="#" id="dark-btn" onclick="toggleDarkMode(); return false;">🌙 Mode Nuit</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-welcome-box">
+                <h1 class="welcome-text"><em>TONGA SOA &bull; BIENVENUE &bull; WELCOME</em></h1>
+                <div class="planet-train-container">
+                    <div class="planet-train-text"><em>AGISSONS POUR LA PLANÈTE</em></div>
+                </div>
+            </div>
+            <h1><em>Agissons pour la</em> <span class="highlight"><em>Planète</em></span></h1>
+            <p><em>Chaque petit geste compte. Découvrez nos solutions durables.</em></p>
+            <a href="#projets" class="btn-decouvrir"><em>Découvrez nos projets</em></a>
+        </div>
+    </section>
+<script>
+// 1. Rehefa misokatra ny pejy: jerena raha efa "dark" ny tany aloha
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('dark-btn').innerText = '☀️ Mode Jour';
+}
+
+// 2. Rehefa tsindrina ilay bokotra
+function toggleDarkMode() {
+    const body = document.body;
+    const btn = document.getElementById('dark-btn');
+    
+    body.classList.toggle('dark-mode');
+    
+    // Tahirizina ao anaty navigateur ny safidy mba ho tsaroany isaky ny pejy
+    if (body.classList.contains('dark-mode')) {
+        btn.innerText = '☀️ Mode Jour';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        btn.innerText = '🌙 Mode Nuit';
+        localStorage.setItem('theme', 'light');
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éco-Avenir | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="index.html"><em>Accueil</em></a></li>
+            <li><a href="programme.html"><em>Programme</em></a></li>
+            <li><a href="equipe.html"><em>Equipe</em></a></li>
+            <li><a href="mission.html"><em>Missions</em></a></li>
+            <li><a href="contact.html" class="active"><em>Contact</em></a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+    <h2 class="section-title"><em>Contactez-nous</em></h2>
+    <p class="texte-intro"><em>Une question ? Une suggestion ? N'hésitez pas à nous joindre.</em></p>
+
+    <div class="grid">
+        <!-- Card ho an'ny Email -->
+        <div class="card">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Email</h3>
+            <p><em>Alefaso eto ny hafatrao</em> :</p>
+            <a href="mailto:<em>lucienramarosonfanomezana@gmail.com</em>" class="btn-olive"><em>lucienramarosonfanomezana@gmail.com</em></a>
+        </div>
+
+        <!-- Card ho an'ny Facebook -->
+        <div class="card">
+            <i class="fab fa-facebook-f"></i>
+            <h3>Facebook</h3>
+            <p><em>Araho izahay ao amin'ny</em> :</p>
+            <a href="https://facebook.com/ecoavenir" target="_blank" class="btn-olive"><em>Lucien ramaroson</em></a>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy;<em>2026 Éco-Avenir. Tous droits réservés.</em> </p>
+    </footer>
+
+<script>
+// Mamaky ny baiko avy amin'ny localStorage fotsiny ireto pejy ireto
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+</script>
+<a href="index.html" class="floating-back-btn">🏠 Retour Initiale</a>
+</body>
+</html>
